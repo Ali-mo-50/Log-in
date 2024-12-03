@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Login System</title>
+    <link rel ="stylesheet" href="css/all.min.css"/>
+    <link rel ="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class=" main-style container my-5  w-75 p-4">
+        <main id="home" class="text-center" style="display: none;">
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">SMART LOGIN</a>
+                    <button class="btn btn-outline-warning " onclick="logout()">Logout</button>
+                </div>
+            </nav>
+            <div class="container my-5">
+                <h1 id="welcomeMessage"></h1>
+            </div>
+        </main>
+    
+         <!-- Authentication Section -->
+         <main id="auth" class="container my-5 text-center">
+            <h1>Smart Login System</h1>
+            <div>
+                <button id="showLogin" class="btn btn-outline-info w-100 my-3">Login</button>
+                <button id="showSignUp" class="btn btn-outline-info w-100 my-3">Sign Up</button>
+            </div>
+    
+            <!-- Login Form -->
+            <div id="loginForm" class="form mt-4" style="display: none;">
+                <h2>Login</h2>
+                <input id="loginEmail" type="email" placeholder="Enter your email" class="form-control my-2" />
+                <input id="loginPassword" type="password" placeholder="Enter your password" class="form-control my-2" />
+                <p id="loginError" class="text-danger"></p>
+                <button onclick="login()" class="btn btn-info">Login</button>
+                <p class="text-white mt-3">
+                    Don’t have an account? 
+                    <a class="text-white" href="#" onclick="showSignUp()">Sign Up</a>
+                </p>
+            </div>
+    
+            <!-- Sign-Up Form -->
+            <div id="signUpForm" class="form mt-4" style="display: none;">
+                <h2>Sign Up</h2>
+                <input id="signUpName" type="text" placeholder="Enter your name" class="form-control my-2" />
+                <input id="signUpEmail" type="email" placeholder="Enter your email" class="form-control my-2" />
+                <input id="signUpPassword" type="password" placeholder="Enter your password" class="form-control my-2" />
+                <!-- Sign-Up Error Message -->
+                <p id="signUpError" class="text-danger"></p>
+                <button onclick="signUp()" class="btn btn-info">Sign Up</button>
+                <p class="text-white mt-3">
+                    You have an account? 
+                    <a class="text-white" href="#" onclick="showLogin()">Sign In</a>
+                </p>
+            </div>
+        </main>
+    </div>
+ 
+   
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
